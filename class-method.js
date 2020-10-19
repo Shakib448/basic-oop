@@ -9,8 +9,8 @@ class Hero {
     }
     return "I have no power";
   }
-  gotForGrocery() {
-    if (this.power) {
+  gotForGrocery(budget) {
+    if (this.power && budget > 1000) {
       console.log(this.getPower());
     }
     return "Price is too hight, I can not buy";
@@ -20,4 +20,4 @@ class Hero {
 const CatMan = new Hero("CatMan", "khamsi");
 
 console.log(CatMan.getPower());
-console.log(CatMan.gotForGrocery());
+console.log(CatMan.gotForGrocery(100));
